@@ -1,0 +1,13 @@
+{
+  "root": true,
+
+  "ignorePatterns": ["data"],
+
+  "overrides": [
+    {
+      "files": ["**/*.js"],
+      "env": { "node": true },
+      "extends": ["airbnb-base"]
+    }
+  ]
+}

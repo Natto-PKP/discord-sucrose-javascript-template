@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  node:
+    image: node:16
+    container_name: discord-sucrose-javascript-template
+    restart: always
+    working_dir: /src/discord-sucrose-javascript-template
+    volumes:
+      - ./:/src/discord-sucrose-javascript-template
+    command: bash -c "npm config set cache /tmp --global && npm i --production=false && node index.js"
