@@ -1,14 +1,16 @@
+const { ComponentType, ButtonStyle } = require('discord.js');
+
 /**
  * @type { import('discord-sucrose').Button }
  */
 module.exports = {
   data: {
-    type: 'BUTTON',
+    type: ComponentType.Button,
     customId: 'useme',
-    style: 'DANGER',
+    style: ButtonStyle.Primary,
   },
 
-  exec: ({ interaction }) => {
-    interaction.reply('Yeeaaaaah !');
+  exec: async ({ interaction }) => {
+    await interaction.reply('Yeeaaaaah !');
   },
 };

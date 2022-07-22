@@ -1,3 +1,4 @@
+const { ApplicationCommandType, ApplicationCommandOptionType } = require('discord.js');
 const { inspect } = require('util');
 
 const template = 'return async () => { const { commands, events } = sucrose; const { buttons, selectMenus } = sucrose.interactions; const { guild, member, user, channel } = interaction; return $code }';
@@ -13,11 +14,11 @@ module.exports = {
 
   body: {
     name: 'eval',
-    type: 'CHAT_INPUT',
+    type: ApplicationCommandType.ChatInput,
     description: 'A command to code immediately',
     options: [{
       name: 'code',
-      type: 'STRING',
+      type: ApplicationCommandOptionType.String,
       description: 'Section of code to test',
       required: true,
     }],

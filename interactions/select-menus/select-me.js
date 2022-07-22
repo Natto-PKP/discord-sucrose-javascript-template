@@ -1,9 +1,11 @@
+const { ComponentType } = require('discord.js');
+
 /**
  * @type { import('discord-sucrose').SelectMenu }
  */
 module.exports = {
   data: {
-    type: 'SELECT_MENU',
+    type: ComponentType.SelectMenu,
     customId: 'select-me',
     placeholder: 'Select me !',
     options: [
@@ -15,7 +17,7 @@ module.exports = {
     ],
   },
 
-  exec: ({ interaction }) => {
-    interaction.reply('I LOVE FERRET !!!');
+  exec: async ({ interaction }) => {
+    await interaction.reply('I LOVE FERRET !!!');
   },
 };
