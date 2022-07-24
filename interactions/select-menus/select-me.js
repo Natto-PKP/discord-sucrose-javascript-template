@@ -4,7 +4,7 @@ const { ComponentType } = require('discord.js');
  * @type { import('discord-sucrose').SelectMenu }
  */
 module.exports = {
-  data: {
+  body: {
     type: ComponentType.SelectMenu,
     customId: 'select-me',
     placeholder: 'Select me !',

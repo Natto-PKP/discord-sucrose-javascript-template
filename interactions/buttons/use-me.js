@@ -4,7 +4,7 @@ const { ComponentType, ButtonStyle } = require('discord.js');
  * @type { import('discord-sucrose').Button }
  */
 module.exports = {
-  data: {
+  body: {
     type: ComponentType.Button,
     customId: 'useme',
     style: ButtonStyle.Primary,
