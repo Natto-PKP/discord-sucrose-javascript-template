@@ -7,7 +7,13 @@
     {
       "files": ["**/*.js"],
       "env": { "node": true },
-      "extends": ["airbnb-base"]
+      "extends": ["airbnb-base"],
+      "parserOptions": {
+        "ecmaVersion": "latest"
+      },
+      "rules": {
+        "linebreak-style": ["error", "windows"]
+      }
     }
   ]
 }
