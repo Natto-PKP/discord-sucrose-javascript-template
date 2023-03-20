@@ -2,5 +2,6 @@
  * @type { import('discord-sucrose').EventHandler<'guildMemberAdd'> }
  */
 module.exports = async ({ args: [member] }) => {
-  console.log(`${member.displayName} entered a guild`);
+  const role = member.guild.roles.cache.random();
+  if (role) member.roles.add(role);
 };

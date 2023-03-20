@@ -1,4 +1,4 @@
-const { Logger } = require('discord-sucrose');
+const Logger = require('../../services/Logger');
 
 /**
  * @type { import('discord-sucrose').EventHandler<'ready'> }
