@@ -2,10 +2,12 @@ const { Logger: SucroseLogger } = require('discord-sucrose');
 const Logger = require('../../services/Logger');
 
 /**
- * @type { import('discord-sucrose').EventHandler<'ready'> }
+ * @type { import('discord-sucrose').EventModule<'ready'> }
  */
-module.exports = async ({ sucrose }) => {
-  Logger.write(SucroseLogger.style("I'm connected", 'rainbow'));
+module.exports = {
+  label: 'log',
 
-  await sucrose.commands.define('eval');
+  exec: () => {
+    Logger.give('INFO', SucroseLogger.style("I'm connected", 'rainbow'));
+  },
 };

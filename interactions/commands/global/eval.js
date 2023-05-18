@@ -8,9 +8,18 @@ const minify = (str) => (str.length > 1200 ? `${str.slice(0, 1197)}...` : str);
  * @type { import('discord-sucrose').ChatInput }
  */
 module.exports = {
-  permissions: {
-    users: ['570642674151981135'], // your user id
-  },
+  tags: ['owner'],
+
+  permissions: [
+    {
+      type: 'USER',
+      allowed: ['983481689739235429'], // add your id here
+    },
+    {
+      type: 'MEMBER',
+      permissions: ['Administrator'],
+    },
+  ],
 
   body: {
     name: 'eval',

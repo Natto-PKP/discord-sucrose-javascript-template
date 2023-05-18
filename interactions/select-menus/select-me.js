@@ -5,7 +5,7 @@ const { ComponentType } = require('discord.js');
  */
 module.exports = {
   body: {
-    type: ComponentType.SelectMenu,
+    type: ComponentType.StringSelect,
     customId: 'select-me',
     placeholder: 'Select me !',
     options: [
